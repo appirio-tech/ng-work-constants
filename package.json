@@ -1,0 +1,8 @@
+{
+  "name": "appirio-tech-ng-work-constants",
+  "version": "0.0.1",
+  "main": "./main.coffee",
+  "dependencies": {
+    "angular": "^1.4.8"
+  }
+}
