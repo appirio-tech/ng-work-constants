@@ -1,7 +1,5 @@
-# require 'angular'
-
-# __VAR__ globals will be brute force replaced by webpack at runtime
-# We *must* define thesse in webpack config or everything will explode
+angular = require 'angular'
+env     = require 'env'
 
 defaultConstants =
   'API_URL'                 : 'https://www.topcoder.com'
@@ -13,6 +11,6 @@ defaultConstants =
 module = angular.module 'app.constants', []
 
 for key, defaultValue of defaultConstants
-  value = this["__#{key}__"] || defaultValue
+  value = env[key] || defaultValue
 
   module.constant key, value
